@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SimpleWebServer - 홈</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="landing-page">
+      <h1>SimpleWebServer에 오신 것을 환영합니다</h1>
+      <p>최소한의 웹서버로 회원가입, 로그인, 로그아웃 기능을 제공합니다.</p>
+
+      <% if (isLoggedIn) { %>
+        <div class="button-group">
+          <a href="/main" class="btn btn-primary">대시보드로 이동</a>
+          <form action="/logout" method="POST" style="display: inline;">
+            <button type="submit" class="btn btn-secondary">로그아웃</button>
+          </form>
+        </div>
+      <% } else { %>
+        <div class="button-group">
+          <a href="/login" class="btn btn-primary">로그인</a>
+          <a href="/signup" class="btn btn-secondary">회원가입</a>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>대시보드 - SimpleWebServer</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="dashboard">
+      <header class="dashboard-header">
+        <h1>대시보드</h1>
+        <form action="/logout" method="POST">
+          <button type="submit" class="btn btn-secondary">로그아웃</button>
+        </form>
+      </header>
+
+      <div class="welcome-message">
+        <h2>환영합니다, <%= userEmail %>님!</h2>
+        <p>로그인에 성공하셨습니다.</p>
+      </div>
+
+      <div class="widget-container">
+        <div class="widget">
+          <h3>대시보드 위젯 1</h3>
+          <p>여기에는 향후 추가될 기능이 표시됩니다.</p>
+        </div>
+
+        <div class="widget">
+          <h3>대시보드 위젯 2</h3>
+          <p>모듈형 구조로 쉽게 확장 가능합니다.</p>
+        </div>
+
+        <div class="widget">
+          <h3>대시보드 위젯 3</h3>
+          <p>새로운 기능을 추가해보세요!</p>
+        </div>
+      </div>
+
+      <div class="form-footer">
+        <p><a href="/">홈으로 돌아가기</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
